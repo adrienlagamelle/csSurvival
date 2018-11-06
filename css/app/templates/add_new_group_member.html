@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <h1>Add New Group Member</h1>
+    <form action='' method='post'>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username() }}
+            {% for error in form.username.errors %}
+                <p class='addGroupMemberError'>{{ error }}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+Ranking
+-------
+Individual Effort:
+Daniel Power: 21
+Adrien Lagamelle: 21
+Xuemeng Li: 20
+Kent Barter: 19
+Stephen Walsh: 19
+
+Value of Contribution to the Project:
+Daniel Power: 21
+Xuemeng Li: 20
+Adrien Lagamelle: 20
+Stephen Walsh: 19
+Kent Barter: 16
+
+Quality of Individual Work-Product:
+Xuemeng Li: 22
+Adrien Lagamelle: 22
+Daniel Power: 21
+Stephen Walsh: 20
+Kent Barter: 19
+
+Teamwork: 
+Adrien Lagamelle: 23
+Stephen Walsh: 21
+Daniel Power: 21
+Xuemeng Li: 18
+Kent Barter: 15
+
+Overall:
+Daniel Power: 84
+Adrien Lagamelle: 86
+Xuemeng Li: 80
+Kent Barter: 69
+Stephen Walsh: 79

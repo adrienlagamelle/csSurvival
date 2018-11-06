@@ -1,0 +1,58 @@
+.siteTitle {
+    font-size: 2em;
+}
+
+.content {
+    margin-left: 2em;
+}
+
+.postTitle {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.siteMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.siteMenu li {
+    float: left;
+}
+
+.siteMenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.4em 1em;
+    text-decoration: none;
+}
+
+.siteMenu li a:hover {
+    background-color: #111;
+}
+
+.postDate {
+    margin-top: 0px;
+    margin-bottom: 0.4em;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.postBody {
+    margin-left: 1em;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+}
+
+.loginError {
+    color: red;
+}
+
+.registrationError {
+    color: red;
+}

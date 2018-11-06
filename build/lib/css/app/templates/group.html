@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <h1>{{ groupName }}</h1>
+    {% for thread in threads %}
+        <p class='threadTitle'>
+            {% if thread.group_id == id %}
+                <a href='{{ url_for('thread', id=thread.id) }}'>{{ thread.title }}</a>
+                by
+                <a href={{ url_for('user', username=thread.author.username) }}>
+                    {{ thread.author.username }}
+                </a>
+            {% endif %}
+        </p>
+    {% endfor %}
+    <br>
+    <form action='' method='post'>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.submit() }}
+            </p>
+        </form>
+{% endblock %}

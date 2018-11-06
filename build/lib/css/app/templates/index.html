@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    {% for thread in threads %}
+        <p class='threadTitle'>
+            {% if thread.group_id == None %}
+                <a href='{{ url_for('thread', id=thread.id) }}'>{{ thread.title }}</a>
+                by
+                <a href={{ url_for('user', username=thread.author.username) }}>
+                    {{ thread.author.username }}
+                </a>
+            {% endif %}
+        </p>
+    {% endfor %}
+{% endblock %}

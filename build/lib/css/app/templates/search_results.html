@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+
+    <h1>Search results for "{{ query }}":</h1>
+
+    {% for thread in results %}
+        <p class='threadTitle'>
+            <a href='{{ url_for('thread', id=thread.id) }}'>{{ thread.title }}</a>
+            {% if thread.user_id == current_user.id %}
+                <a href='{{ url_for('edit')+'?thread='~thread.id }}'>Edit</a>
+            {% endif %}
+        </p>
+    {% endfor %}
+{% endblock %}

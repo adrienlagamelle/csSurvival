@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <h1>{{ thread.title }}</h1>
+    <b>Posted by {{ thread.author.username }}</b>
+    {% if current_user.id == thread.user_id %}
+        <a href='{{ url_for('edit')+'?thread='~thread.id }}'>Edit</a>
+        <a href='{{ url_for('deleteThread', id=thread.id) }}'>Delete</a>
+    {% endif %}
+    <br>
+    <p>{{ thread.body|markdown }}</p>
+    {% for comment in comments %}
+        <p>
+            {% if current_user.id == comment.user_id %}
+                <a href='{{ url_for('deleteComment', id=comment.id) }}'>Delete</a>
+            {% endif %}
+            <b>{{ comment.author.username }}:</b><br>
+            {{ comment.body|markdown }}</p>
+        </p>
+    {% endfor %}
+    <form action='' method='post'>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.body.label }}<br>
+            {{ form.body() }}
+        </p>
+        <p>
+            {{ form.submit() }}
+			{% if is_subscribed %}
+
+			{{ form.unsubscribe() }}
+
+			{% else %}
+
+			{{ form.subscribe() }}
+
+			{% endif %}
+        </p>
+    </form>
+{% endblock %}
